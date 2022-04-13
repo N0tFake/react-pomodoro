@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Electrolize&family=Geo&display=swap');
+
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-size: 24px;
+  font-family: 'Geo', sans-serif;
+}
+
+.icon {
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.btnMuted {
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #141E22;
+}
+
+.btnMuted:hover {
+  transform: scale(1.1);
+}
+
