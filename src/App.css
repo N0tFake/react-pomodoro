@@ -1,38 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Electrolize&family=Geo&display=swap');
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 62px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.pause {
+  font-family: 'Geo', sans-serif;
+  color: #FF6347;
+  font-size: x-large;
+  position: fixed;
+  margin-left: 275px;
+  margin-top: 30px;
+}
+
+.Title {
+  margin-top: 30px;
+  margin-bottom: 62px;
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 70px;
+  color: #FF6347;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container-btn-clocks{
+  display: flex;
+  width: 600px;
+  height: 50px;
+}
+
+.container-btn-functions{
+  display: flex;
+  width: 600px;
+  height: 50px;
+}
+
+.Clock {
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  justify-content: center;
+
+  font-family: 'Geo', sans-serif;
+  font-size: 80px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
