@@ -141,7 +141,7 @@ function App() {
 
   return (
     <>
-      {/* <ReactPlayer url={video_url} width={'0px'} height="0px" playing={play} muted={muted} /> */}
+      <ReactPlayer url={video_url} width={'0px'} height="0px" playing={play} muted={muted} />
       <h1 className="Title">Pomodoro Timer</h1>
       <div className="App">
         <div>
