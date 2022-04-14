@@ -1,30 +1,11 @@
 import './App.css';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from './components/Button';
 import { UseInterval } from './utils/clock/useInterval';
-import { UseAsync, FetchData, video_url } from './utils/fetchData/UseAsync';
-import ReactPlayer from 'react-player';
-import { MusicTitle } from './components/MusicTitle';
 
-import { BsPlayFill, BsPauseFill } from 'react-icons/bs';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
 function App() {
-  const [reFetchData, result, error, status] = UseAsync(FetchData, true);
-
-  const getTitle = () => {
-    let title = '';
-    if (status === 'settled') {
-      title = result.items[0].snippet.title;
-    } else if (status === 'idle') {
-      title = 'Não iniciado';
-    } else if (status === 'pending') {
-      title = 'Carregando';
-    } else if (status === 'error') {
-      title = error;
-    }
-    return title;
-  };
-
   const [btnPomodoro, setbtnPomodoro] = useState({
     title: 'Pomodoro',
     isAble: true,
@@ -141,7 +122,6 @@ function App() {
 
   return (
     <>
-      <ReactPlayer url={video_url} width={'0px'} height="0px" playing={play} muted={muted} />
       <h1 className="Title">Pomodoro Timer</h1>
       <div className="App">
         <div>
@@ -150,7 +130,7 @@ function App() {
             <Button onClick={() => replaceBtn(btnShortBreak)} text={btnShortBreak.title} id={id.ShortBreak} />
             <Button onClick={() => replaceBtn(btnLongBreak)} text={btnLongBreak.title} id={id.LongBreak} />
           </div>
-          {nameBtn == 'Pause' ? null : <div className="pause">Pause {/* <BsPlayFill color="#FF6347"  /> */}</div>}
+          {nameBtn == 'Pause' ? null : <div className="pause">Pause</div>}
           <div className="Clock">
             <div>{clock}</div>
           </div>
@@ -160,7 +140,14 @@ function App() {
             <Button onClick={() => setcountdownPomodoro(timer)} text="Reset" id={'reset'} />
           </div>
         </div>
-        <MusicTitle title={getTitle()} muted={muted} onClick={handleMutedVideo} />
+        <div className="container-links">
+          <a className="btn-links" href="https://github.com/N0tFake/react-pomodoro">
+            <BsGithub size={20} />
+          </a>
+          <a className="btn-links" href="https://www.linkedin.com/in/silvio-otavio-b94372172/">
+            <BsLinkedin size={20} />
+          </a>
+        </div>
       </div>
     </>
   );

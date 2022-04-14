@@ -18,6 +18,17 @@
   margin-top: 30px;
 }
 
+.container-links {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-links {
+  border: 0;
+  color: white;
+}
+
 .Title {
   margin-top: 30px;
   margin-bottom: 62px;
